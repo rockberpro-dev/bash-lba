@@ -88,7 +88,7 @@ hbar() {
 # =========================
 # Read Aliases from file
 # =========================
-LBA_FILE="${BASH_LBA_FILE:-$HOME/.bash-lba.sh}"
+LBA_FILE="${BASH_LBA_FILE:-$(dirname "${BASH_SOURCE[0]}")/bash-lba.sh}"
 
 if [[ ! -f "$LBA_FILE" ]]; then
   echo "Error: $LBA_FILE not found." >&2
