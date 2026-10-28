@@ -4,16 +4,28 @@ set -e
 
 SRC_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-INSTALL_PATH="$HOME/.bash-lba.sh"
-HELP_PATH="$HOME/.bash-lba-help.sh"
+CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/bash-lba"
 
-cp "$SRC_DIR/bash-lba.sh" "$INSTALL_PATH"
+INSTALL_PATH="$CONFIG_DIR/bash-lba.sh"
+HELP_PATH="$CONFIG_DIR/bash-lba-help.sh"
 
 BASHRC="${BASHRC:-$HOME/.bashrc}"
 
-if ! grep -qF "source $INSTALL_PATH" "$BASHRC" 2>/dev/null; then
+# Remove files from older versions, which installed directly into ~
+rm -f "$HOME/.bash-lba.sh" "$HOME/.bash-lba-help.sh"
+if [ -f "$BASHRC" ] && grep -qF '/.bash-lba.sh' "$BASHRC"; then
+    grep -vF '/.bash-lba.sh' "$BASHRC" > "$BASHRC.bash-lba.tmp" || true
+    cat "$BASHRC.bash-lba.tmp" > "$BASHRC"
+    rm -f "$BASHRC.bash-lba.tmp"
+fi
+
+mkdir -p "$CONFIG_DIR"
+
+cp "$SRC_DIR/bash-lba.sh" "$INSTALL_PATH"
+
+if ! grep -qF "source \"$INSTALL_PATH\"" "$BASHRC" 2>/dev/null; then
     echo "" >> "$BASHRC"
-    echo "source $INSTALL_PATH" >> "$BASHRC"
+    echo "source \"$INSTALL_PATH\"" >> "$BASHRC"
 fi
 
 cp "$SRC_DIR/bash-lba-help.sh" "$HELP_PATH"

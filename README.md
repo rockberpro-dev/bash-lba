@@ -57,18 +57,20 @@ Then reload your shell:
 source ~/.bashrc
 ```
 
-The setup script adds a single `source` line to `~/.bashrc` and copies two files to `~/`. You can read the full source ([setup.sh](setup.sh)) before running it, or use the manual install below.
+The setup script adds a single `source` line to `~/.bashrc` and copies two files to `~/.config/bash-lba/` (or `$XDG_CONFIG_HOME/bash-lba/`). Re-running it upgrades an older install that put the files directly in `~/`: the old files and source line are removed. You can read the full source ([setup.sh](setup.sh)) before running it, or use the manual install below.
 
 **Manual install:**
 
 ```bash
+mkdir -p ~/.config/bash-lba
+
 curl -sL https://raw.githubusercontent.com/rockberpro/bash-lba/main/bash-lba.sh \
-  -o ~/.bash-lba.sh
+  -o ~/.config/bash-lba/bash-lba.sh
 
 curl -sL https://raw.githubusercontent.com/rockberpro/bash-lba/main/bash-lba-help.sh \
-  -o ~/.bash-lba-help.sh && chmod +x ~/.bash-lba-help.sh
+  -o ~/.config/bash-lba/bash-lba-help.sh && chmod +x ~/.config/bash-lba/bash-lba-help.sh
 
-echo 'source ~/.bash-lba.sh' >> ~/.bashrc
+echo 'source ~/.config/bash-lba/bash-lba.sh' >> ~/.bashrc
 source ~/.bashrc
 ```
 
@@ -115,10 +117,10 @@ source ~/.bashrc
 
 ```bash
 # Remove the source line from .bashrc
-sed -i '/source ~\/.bash-lba.sh/d' ~/.bashrc
+sed -i '/\/bash-lba\/bash-lba\.sh/d' ~/.bashrc
 
 # Remove the files
-rm ~/.bash-lba.sh ~/.bash-lba-help.sh
+rm -r ~/.config/bash-lba
 ```
 
 ---

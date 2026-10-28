@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased]
+
+### Changed
+
+- Files now install to `~/.config/bash-lba/` (or `$XDG_CONFIG_HOME/bash-lba/`) instead of directly in `~/`. Re-running the setup script migrates an older install: it removes `~/.bash-lba.sh`, `~/.bash-lba-help.sh` and the old source line in `~/.bashrc`
+
 ## [0.1.0] - 2026-04-16
 
 ### Added

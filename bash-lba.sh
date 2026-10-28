@@ -6,7 +6,7 @@
 #   curl -sL https://raw.githubusercontent.com/rockberpro/bash-lba/main/setup.sh | bash
 #
 # Manual install:
-#   echo 'source ~/.bash-lba.sh' >> ~/.bashrc && source ~/.bashrc
+#   echo 'source ~/.config/bash-lba/bash-lba.sh' >> ~/.bashrc && source ~/.bashrc
 # ==============================================================================
 
 # --- NAVIGATION ---
@@ -65,4 +65,4 @@ alias ev='env'
 alias evg='env | grep'
 
 # --- HELP ---
-alias lba='~/.bash-lba-help.sh'
+alias lba='"${XDG_CONFIG_HOME:-$HOME/.config}/bash-lba/bash-lba-help.sh"'
