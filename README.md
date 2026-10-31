@@ -18,22 +18,9 @@ Then reload your shell:
 source ~/.bashrc
 ```
 
-The setup script adds a single `source` line to `~/.bashrc` and copies two files to `~/.config/bash-lba/` (or `$XDG_CONFIG_HOME/bash-lba/`). Re-running it upgrades an older install that put the files directly in `~/`: the old files and source line are removed. You can read the full source ([setup.sh](setup.sh)) before running it, or use the manual install below.
+The script copies the files to `~/.config/bash-lba/` and adds a `source` line to `~/.bashrc`.
 
-**Manual install:**
-
-```bash
-mkdir -p ~/.config/bash-lba
-
-curl -sL https://raw.githubusercontent.com/rockberpro-dev/bash-lba/main/bash-lba.sh \
-  -o ~/.config/bash-lba/bash-lba.sh
-
-curl -sL https://raw.githubusercontent.com/rockberpro-dev/bash-lba/main/bash-lba-help.sh \
-  -o ~/.config/bash-lba/bash-lba-help.sh && chmod +x ~/.config/bash-lba/bash-lba-help.sh
-
-echo 'source ~/.config/bash-lba/bash-lba.sh' >> ~/.bashrc
-source ~/.bashrc
-```
+Manual install, upgrade and uninstall: [GUIDE.md](GUIDE.md).
 
 ## How It Reads
 
@@ -115,16 +102,6 @@ Run `lba` to see every alias right in your terminal:
 | `evg`  | `env \| grep`        | Environment    |
 | `lba`  | show alias table     | Help           |
 
-## Uninstall
-
-```bash
-# Remove the source line from .bashrc
-sed -i '/\/bash-lba\/bash-lba\.sh/d' ~/.bashrc
-
-# Remove the files
-rm -r ~/.config/bash-lba
-```
-
 ---
 
-[setup.sh](setup.sh) · [bash-lba.sh](bash-lba.sh) · [bash-lba-help.sh](bash-lba-help.sh)
+[GUIDE.md](GUIDE.md) · [CHANGELOG.md](CHANGELOG.md) · [setup.sh](setup.sh) · [bash-lba.sh](bash-lba.sh) · [bash-lba-help.sh](bash-lba-help.sh)
