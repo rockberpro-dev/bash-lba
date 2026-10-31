@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+### Added
+
+- 12 new aliases: `cp`, `mv` (interactive), `rmr`, `hig`, `rl`, `pic`, `sst`, `grn`, `grv`, `fr`, `kla`, `tln`
+- New Archive group: `tc`, `tx`, `tv`
+
 ### Changed
 
 - Files now install to `~/.config/bash-lba/` (or `$XDG_CONFIG_HOME/bash-lba/`) instead of directly in `~/`. Re-running the setup script migrates an older install: it removes `~/.bash-lba.sh`, `~/.bash-lba-help.sh` and the old source line in `~/.bashrc`

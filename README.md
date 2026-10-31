@@ -60,7 +60,7 @@ Run `lba` to see every alias right in your terminal:
 ║ lz     │ ls -lAS                                ║
 ║         ...                                     ║
 ╚═════════════════════════════════════════════════╝
-  37 aliases across 11 groups
+  49 aliases across 13 groups
 ```
 
 ## Alias Reference
@@ -78,26 +78,41 @@ Run `lba` to see every alias right in your terminal:
 | `mk`   | `mkdir`              | File Ops       |
 | `mkp`  | `mkdir -p`           | File Ops       |
 | `rm`   | `rm -i`              | File Ops       |
+| `cp`   | `cp -i`              | File Ops       |
+| `mv`   | `mv -i`              | File Ops       |
 | `cpr`  | `cp -r`              | File Ops       |
+| `rmr`  | `rm -r`              | File Ops       |
 | `cl`   | `clear`              | System         |
 | `hi`   | `history`            | System         |
+| `hig`  | `history \| grep`    | System         |
+| `rl`   | `source ~/.bashrc`   | System         |
 | `psa`  | `ps aux`             | System         |
 | `psg`  | `ps aux \| grep`     | System         |
 | `pi`   | `ping`               | Network        |
+| `pic`  | `ping -c 4`          | Network        |
+| `sst`  | `ss -tulpn`          | Network        |
 | `gr`   | `grep`               | Grep           |
 | `gri`  | `grep -i`            | Grep           |
 | `grr`  | `grep -r`            | Grep           |
+| `grn`  | `grep -n`            | Grep           |
+| `grv`  | `grep -v`            | Grep           |
 | `fd`   | `find . -name`       | File Search    |
 | `fdi`  | `find . -iname`      | File Search    |
 | `df`   | `df -h`              | Disk           |
 | `du`   | `du -h`              | Disk           |
 | `dul`  | `du -sh *`           | Disk           |
+| `fr`   | `free -h`            | Disk           |
 | `kl`   | `kill`               | Process        |
 | `kl9`  | `kill -9`            | Process        |
+| `kla`  | `killall`            | Process        |
 | `ct`   | `cat`                | Text           |
 | `hd`   | `head`               | Text           |
 | `tl`   | `tail`               | Text           |
 | `tlf`  | `tail -f`            | Text           |
+| `tln`  | `tail -n`            | Text           |
+| `tc`   | `tar -czf`           | Archive        |
+| `tx`   | `tar -xzf`           | Archive        |
+| `tv`   | `tar -tzf`           | Archive        |
 | `ev`   | `env`                | Environment    |
 | `evg`  | `env \| grep`        | Environment    |
 | `lba`  | show alias table     | Help           |
