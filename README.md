@@ -6,6 +6,37 @@
 
 <p align="center">A curated set of short, memorable bash aliases organized by category.</p>
 
+## Install
+
+```bash
+curl -sL https://raw.githubusercontent.com/rockberpro-dev/bash-lba/main/setup.sh | bash
+```
+
+Then reload your shell:
+
+```bash
+source ~/.bashrc
+```
+
+The setup script adds a single `source` line to `~/.bashrc` and copies two files to `~/.config/bash-lba/` (or `$XDG_CONFIG_HOME/bash-lba/`). Re-running it upgrades an older install that put the files directly in `~/`: the old files and source line are removed. You can read the full source ([setup.sh](setup.sh)) before running it, or use the manual install below.
+
+**Manual install:**
+
+```bash
+mkdir -p ~/.config/bash-lba
+
+curl -sL https://raw.githubusercontent.com/rockberpro-dev/bash-lba/main/bash-lba.sh \
+  -o ~/.config/bash-lba/bash-lba.sh
+
+curl -sL https://raw.githubusercontent.com/rockberpro-dev/bash-lba/main/bash-lba-help.sh \
+  -o ~/.config/bash-lba/bash-lba-help.sh && chmod +x ~/.config/bash-lba/bash-lba-help.sh
+
+echo 'source ~/.config/bash-lba/bash-lba.sh' >> ~/.bashrc
+source ~/.bashrc
+```
+
+## How It Reads
+
 Two-letter **prefix** picks the command. One-letter **suffix** is the first letter of the flag or variant.
 
 ```
@@ -43,35 +74,6 @@ Run `lba` to see every alias right in your terminal:
 ║         ...                                     ║
 ╚═════════════════════════════════════════════════╝
   37 aliases across 11 groups
-```
-
-## Install
-
-```bash
-curl -sL https://raw.githubusercontent.com/rockberpro/bash-lba/main/setup.sh | bash
-```
-
-Then reload your shell:
-
-```bash
-source ~/.bashrc
-```
-
-The setup script adds a single `source` line to `~/.bashrc` and copies two files to `~/.config/bash-lba/` (or `$XDG_CONFIG_HOME/bash-lba/`). Re-running it upgrades an older install that put the files directly in `~/`: the old files and source line are removed. You can read the full source ([setup.sh](setup.sh)) before running it, or use the manual install below.
-
-**Manual install:**
-
-```bash
-mkdir -p ~/.config/bash-lba
-
-curl -sL https://raw.githubusercontent.com/rockberpro/bash-lba/main/bash-lba.sh \
-  -o ~/.config/bash-lba/bash-lba.sh
-
-curl -sL https://raw.githubusercontent.com/rockberpro/bash-lba/main/bash-lba-help.sh \
-  -o ~/.config/bash-lba/bash-lba-help.sh && chmod +x ~/.config/bash-lba/bash-lba-help.sh
-
-echo 'source ~/.config/bash-lba/bash-lba.sh' >> ~/.bashrc
-source ~/.bashrc
 ```
 
 ## Alias Reference

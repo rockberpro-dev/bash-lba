@@ -1,9 +1,9 @@
 # ==============================================================================
 # LBA — Logical Bash Aliases
-# https://github.com/rockberpro/bash-lba
+# https://github.com/rockberpro-dev/bash-lba
 #
 # Install:
-#   curl -sL https://raw.githubusercontent.com/rockberpro/bash-lba/main/setup.sh | bash
+#   curl -sL https://raw.githubusercontent.com/rockberpro-dev/bash-lba/main/setup.sh | bash
 #
 # Manual install:
 #   echo 'source ~/.config/bash-lba/bash-lba.sh' >> ~/.bashrc && source ~/.bashrc
