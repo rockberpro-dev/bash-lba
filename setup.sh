@@ -19,14 +19,14 @@ fi
 
 mkdir -p "$CONFIG_DIR"
 
-curl -sL "https://raw.githubusercontent.com/rockberpro/bash-lba/main/bash-lba.sh" -o "$INSTALL_PATH"
+curl -sL "https://raw.githubusercontent.com/rockberpro-dev/bash-lba/main/bash-lba.sh" -o "$INSTALL_PATH"
 
 if ! grep -qF "source \"$INSTALL_PATH\"" "$BASHRC" 2>/dev/null; then
     echo "" >> "$BASHRC"
     echo "source \"$INSTALL_PATH\"" >> "$BASHRC"
 fi
 
-curl -sL "https://raw.githubusercontent.com/rockberpro/bash-lba/main/bash-lba-help.sh" -o "$HELP_PATH"
+curl -sL "https://raw.githubusercontent.com/rockberpro-dev/bash-lba/main/bash-lba-help.sh" -o "$HELP_PATH"
 chmod +x "$HELP_PATH"
 
 echo "bash-lba installed: $INSTALL_PATH"
