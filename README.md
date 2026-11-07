@@ -6,6 +6,8 @@
 
 <p align="center">A curated set of short, memorable bash aliases organized by category.</p>
 
+<p align="center"><img src="resources/img/demo.svg" alt="bash-lba demo" width="700"></p>
+
 ## Install
 
 ```bash

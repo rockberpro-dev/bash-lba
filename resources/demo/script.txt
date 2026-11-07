@@ -1,0 +1,12 @@
+# Navigate and list
+mkp proj/src/app
+cd proj/src/app
+...
+ll
+# Search
+echo "hello lba" > notes.txt
+gri HELLO notes.txt
+fd notes.txt
+# Disk and system
+dul
+pic localhost
