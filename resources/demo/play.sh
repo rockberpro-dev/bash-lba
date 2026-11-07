@@ -15,7 +15,7 @@ while IFS= read -r line || [ -n "$line" ]; do
   printf '\033[32m$ \033[0m'
   for ((i = 0; i < ${#line}; i++)); do
     printf '%s' "${line:i:1}"
-    sleep 0.04
+    sleep 0.07
   done
   printf '\n'
   eval "$line"
