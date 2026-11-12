@@ -18,10 +18,10 @@ Read the source before you run it: [setup.sh](setup.sh).
 ```bash
 mkdir -p ~/.config/bash-lba
 
-curl -sL https://raw.githubusercontent.com/rockberpro-dev/bash-lba/main/bash-lba.sh \
+curl -sL https://raw.githubusercontent.com/rockberpro-labs/bash-lba/main/bash-lba.sh \
   -o ~/.config/bash-lba/bash-lba.sh
 
-curl -sL https://raw.githubusercontent.com/rockberpro-dev/bash-lba/main/bash-lba-help.sh \
+curl -sL https://raw.githubusercontent.com/rockberpro-labs/bash-lba/main/bash-lba-help.sh \
   -o ~/.config/bash-lba/bash-lba-help.sh && chmod +x ~/.config/bash-lba/bash-lba-help.sh
 
 echo 'source ~/.config/bash-lba/bash-lba.sh' >> ~/.bashrc

@@ -11,7 +11,7 @@
 ## Install
 
 ```bash
-curl -sL https://raw.githubusercontent.com/rockberpro-dev/bash-lba/main/setup.sh | bash
+curl -sL https://raw.githubusercontent.com/rockberpro-labs/bash-lba/main/setup.sh | bash
 ```
 
 Then reload your shell:
